@@ -1,6 +1,9 @@
 # Enterprise Data Agent
 
-This is a sample repository that demonstrates exploration of structured and unstructured data using and agentic architecture based on [Microsoft Agent Framework](https://aka.ms/agent-framework). It leverages [CopilotKit](https://www.copilotkit.ai/) for the core user experience. The code used in this sample was originated from [this template](https://github.com/CopilotKit/with-microsoft-agent-framework-python) created by the CopilotKit team.
+This is a sample application that demonstrates exploration of structured and unstructured data using and agentic retrieval and NL2SQL. It leverages [Microsoft Agent Framework](https://aka.ms/agent-framework) (MAF) as an agent orchestratory and [CopilotKit](https://www.copilotkit.ai/) for the core user experience. These two pieces work together using the MAF implementation of the AG-UI protocol in the [agent-framework-ag-ui](https://pypi.org/project/agent-framework-ag-ui/) package. The code used in this sample was originated from [this template](https://github.com/CopilotKit/with-microsoft-agent-framework-python) created by the CopilotKit team.
+
+> [!IMPORTANT]
+> There is currently a bug in `agent-framework-ag-ui` where thread IDs generated in CopilotKit are not passed to the server-side agent. This limitation is referenced in the following GitHub issues: [2517](https://github.com/microsoft/agent-framework/issues/2517), [2458](https://github.com/microsoft/agent-framework/issues/2458), and [2479](https://github.com/microsoft/agent-framework/issues/2479). As a result of this, it is currently not possible to use `AzureAIAgentClient` because there is no way to link threads from Microsoft Foundry to threads from CopilotKit.
 
 ## Prerequisites
 
